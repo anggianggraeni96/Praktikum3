@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Contoh Program JavaScript </title>
+    </head>
+    <script language="JavaScript">
+        function test(){
+            val1 = window.prompt("nilai I :") //Menampilkan textbox inputan berisi : nilai I :
+            val2 = window.prompt("nilai II :") //Menampilkan textbox inputan berisi : nilai II :
+            document.write("<br>"+"val1==val2"+"<br>") //Print : val1==val2
+            document.write(val1==val2) //Print : val1==va2
+            document.write("<br>"+"val1!=val2"+"<br>") //Print : val1!=val2
+            document.write(val1!=val2) //Print : nilai val1!=va2
+            document.write("<br>"+"val1&gtval2"+"<br>") //Print : val1>val2
+            document.write(val1>val2) //Print : nilai val1>va2
+            document.write("<br>"+"val1&ltval2"+"<br>") //Print : val1<val2
+            document.write(val1<val2) //Print : nilai val1<va2
+        }
+    </script>
+    <body>
+        <!-- Menampilkan button yang memanggil function test -->
+        <input type="button" name="button1" value="relational" onclick=test()>
+    </body>
+</html>

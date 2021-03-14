@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Kalkulator Sederhana</title>
+    </head>   
+    <body>
+        <form name="hitung">
+            <h1>Kalkulator</h1> <!--Print : Kalkulator-->
+            <table> 
+                <tr>
+                    <td>Bil 1 :</td><td><input type="number" name="b1" size="20"></td> <!--Print : Bil 1: dan textbox-->
+                </tr>
+                <tr>
+                    <td>Bil 2 :</td><td><input type="number" name="b2" size="20"></td> <!--Print : Bil 2: dan textbox-->
+                </tr> 
+                <tr>
+                    <td>Hasil :</td><td><input type="number" name="Hasil" size="20"></td> <!--Print : Hasil : dan textbox-->
+                </tr>  
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="button" value="+" onclick=tambah()> <!--Button yang memanggil function tambah()-->
+                        <input type="button" value="-" onclick=kurang()> <!--Button yang memanggil function kurang()-->
+                        <input type="button" value="*" onclick=kali()> <!--Button yang memanggil function kali()-->
+                        <input type="button" value="/" onclick=bagi()> <!--Button yang memanggil function bagi()-->
+                    </td>
+                </tr>
+            </table>
+        </form>         
+        <script language="JavaScript">  
+            //<!-
+            function tambah(){  //Menjumlahkan nilai bil 1 dan bil 2
+                var val1 = parseFloat(document.hitung.b1.value); //mendeklarasikan variabel val1 dan inisialisasi dari b1
+                var val2 = parseFloat(document.hitung.b2.value); //mendeklarasikan variabel val2 dan inisialisasi dari b2
+                var hasil = val1+val2; //menghitung hasil val1+val2
+                document.hitung.Hasil.value = hasil; //menampilkan hasil
+            }
+            function kurang(){ //mengurangkan nilai bil 1 oleh bil 2
+                var val1 = parseFloat(document.hitung.b1.value); //mendeklarasikan variabel val1 dan inisialisasi dari b1
+                var val2 = parseFloat(document.hitung.b2.value); //mendeklarasikan variabel val2 dan inisialisasi dari b2
+                var hasil = val1-val2; //menghitung hasil val1-val2
+                document.hitung.Hasil.value = hasil; //menampilkan hasil
+            }
+            function kali(){ // mengalikan nilai bil 1 dan bil 2
+                var val1 = parseFloat(document.hitung.b1.value); //mendeklarasikan variabel val1 dan inisialisasi dari b1
+                var val2 = parseFloat(document.hitung.b2.value); //mendeklarasikan variabel val2 dan inisialisasi dari b2
+                var hasil = val1*val2; //menghitung hasil val1*val2
+                document.hitung.Hasil.value = hasil; //menampilkan hasil
+            }
+            function bagi(){ // membagi nilai bil 1 oleh bil 2
+                var val1 = parseFloat(document.hitung.b1.value); //mendeklarasikan variabel val1 dan inisialisasi dari b1
+                var val2 = parseFloat(document.hitung.b2.value); //mendeklarasikan variabel val2 dan inisialisasi dari b2
+                var hasil = val1/val2; //menghitung hasil val1/val2
+                document.hitung.Hasil.value = hasil; //menampilkan hasil
+            }
+            //->
+        </script>      
+    </body>
+</html>

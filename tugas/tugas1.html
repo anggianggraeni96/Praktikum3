@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mengubah Angka menjadi Huruf</title>
+    </head>
+    <body>
+        <form name="konversi">
+            <h1>Konversi</h1>
+            <table>
+                <tr>
+                    <td>Nilai 0-100</td><td><input type="text" name="nilai"></td> <!--Print : Nilai 0-100 dan textbox-->
+                </tr>
+                <tr>
+                    <td>Hasil</td><td><input type="text" name="hasil"></td> <!--Print : Hasil dan textbox-->
+                </tr>
+                <tr>
+                    <td><input type="button" value="konversi" onclick=angka()></td> <!--Button yang memanggil function angka()-->
+                </tr>
+            </table>
+        </form>
+        <script language="JavaScript">
+            //<!-
+            function angka(){
+                nilai = document.konversi.nilai.value //mengambil nilai
+                if (100 <= nilai >= 81)
+                document.konversi.hasil.value = "A"; //inisialisasi hasil = A jika nilai yang diinput antara 81-100
+                else if (nilai >= 71)
+                document.konversi.hasil.value = "AB"; //inisialisasi hasil = AB jika nilai yang diinput antara 71-80
+                else if (nilai >= 66)
+                document.konversi.hasil.value = "B"; //inisialisasi hasil = B jika nilai yang diinput antara 66-70
+                else if (nilai >= 61)
+                document.konversi.hasil.value = "BC"; //inisialisasi hasil = BC jika nilai yang diinput antara 61-65
+                else if (nilai >= 56)
+                document.konversi.hasil.value = "C"; //inisialisasi hasil = C jika nilai yang diinput antara 56-60
+                else if (nilai >= 41)
+                document.konversi.hasil.value = "D"; //inisialisasi hasil = D jika nilai yang diinput antara 41-55
+                else if (nilai >= 0)
+                document.konversi.hasil.value = "E"; //inisialisasi hasil = E jika nilai yang diinput antara 0-40
+                // document.write("Nilai :"+hasil) //Print : Nilai : +nilai hasil
+            } 
+            //->
+        </script>
+    </body>
+</html>

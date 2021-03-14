@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Contoh Program JavaScript</title>
+    </head>
+    <script language="JavaScript">
+        function test(){
+            val1 = window.prompt("Input Nilai (1-5) : ") //menampilkan jendela inputan
+            switch(val1) //Percabangan untuk menampilkan output sesuaai pilihan
+            {
+                case"1" :
+                document.write("Bilangan satu") //Print : Bilangan satu
+                break
+
+                case"2" :
+                document.write("Bilangan dua") //Print : Bilangan dua
+                break
+
+                case"3" :
+                document.write("Bilangan tiga") //Print : Bilangan tiga
+                break
+
+                case"4" :
+                document.write("Bilangan empat") //Print : Bilangan empat
+                break
+
+                case"5" :
+                document.write("Bilangan lima") //Print : Bilangan lima
+                break
+
+                default : 
+                document.write("Bilangan lainnya") //Print : Bilangan lainnya
+            }
+        }
+    </script>
+    <body>
+        <!-- Menampilkan button yang memanggil function test -->
+        <input type="button" name="button1" value="switch" onclick=test()>
+    </body>
+</html>
